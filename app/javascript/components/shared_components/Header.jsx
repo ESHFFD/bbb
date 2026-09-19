@@ -36,17 +36,19 @@ export default function Header() {
   }
 
   return (
-    <Navbar collapseOnSelect id="navbar" expand="sm">
+    // <Navbar collapseOnSelect id="navbar" expand="sm">
+      <Navbar collapseOnSelect >
       <Container className="ps-0">
-        <Navbar.Brand as={Link} to={homePath} className="ps-2">
+        {/* <Navbar.Brand as={Link} to={homePath} className="ps-2">
           <Logo size="small" />
-        </Navbar.Brand>
+        </Navbar.Brand> */}
         {
           currentUser.signed_in
             ? (
               <NavbarSignedIn currentUser={currentUser} />
             ) : (
-              <NavbarNotSignedIn />
+              // <NavbarNotSignedIn />
+              null
             )
         }
       </Container>

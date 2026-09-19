@@ -48,7 +48,8 @@ export default function Signup() {
   }
 
   return (
-    <div className="vertical-center">
+    <div style={{ backgroundColor:'red' , position:'relative'}}>
+      <div className="vertical-center" style={{backgroundColor:'#030e27'}}>
       <div className="text-center pb-4">
         <Logo />
       </div>
@@ -59,6 +60,7 @@ export default function Signup() {
           <Link to="/signin" className="text-link"> { t('authentication.sign_in') } </Link>
         </span>
       </Card>
+    </div>
     </div>
   );
 }

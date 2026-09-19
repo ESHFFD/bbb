@@ -43,9 +43,6 @@ ActiveRecord::Schema[7.2].define(version: 2026_04_02_000000) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "data_migrations", primary_key: "version", id: :string, force: :cascade do |t|
-  end
-
   create_table "formats", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "recording_id"
     t.string "recording_type", null: false
@@ -86,9 +83,9 @@ ActiveRecord::Schema[7.2].define(version: 2026_04_02_000000) do
     t.string "record_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "visibility", null: false
-    t.integer "length", null: false
-    t.integer "participants", null: false
+    t.string "visibility", default: "published", null: false
+    t.integer "length", default: 0, null: false
+    t.integer "participants", default: 0, null: false
     t.boolean "protectable"
     t.datetime "recorded_at"
     t.index ["room_id"], name: "index_recordings_on_room_id"
@@ -193,7 +190,7 @@ ActiveRecord::Schema[7.2].define(version: 2026_04_02_000000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.uuid "role_id"
-    t.string "language", null: false
+    t.string "language", default: "en", null: false
     t.string "reset_digest"
     t.datetime "reset_sent_at"
     t.boolean "verified", default: false

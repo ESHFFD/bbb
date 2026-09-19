@@ -54,12 +54,12 @@ export default function AuthButtons({ direction }) {
 
   return (
     <Stack direction={direction} gap={2}>
-      { showSignUp()
+      {/* { showSignUp()
           && (
             <ButtonLink to={`/signup${search}`} variant="brand-outline-color" className="btn">
               {t('authentication.sign_up')}
             </ButtonLink>
-          ) }
+          ) } */}
       <ButtonLink to="/signin" variant="brand" className="btn">{t('authentication.sign_in')}</ButtonLink>
     </Stack>
   );

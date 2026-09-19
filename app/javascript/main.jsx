@@ -73,7 +73,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
 
       <Route element={<UnauthenticatedOnly />}>
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/signup" element={<Signup />} /> */}
         <Route path="/signin" element={<SignIn />} />
         <Route path="/forget_password" element={<ForgetPassword />} />
         <Route path="/pending" element={<PendingRegistration />} />

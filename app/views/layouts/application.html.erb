@@ -17,18 +17,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BigBlueButton</title>
+    <title>شرکت مهندسی وتوسعه گازایران</title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Open Graph Attributes -->
     <meta property="og:title" content="<%= page_title %>" />
     <meta property="og:description" content="<%= t('opengraph.description') %>" />
-    <meta property="og:image" content="<%= branding_image %>" />
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "main", defer: true %>
+    
   </head>
 
   <body>
@@ -36,3 +37,4 @@
   </body>
 </html>
 
+    

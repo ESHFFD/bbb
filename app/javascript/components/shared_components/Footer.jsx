@@ -29,9 +29,10 @@ export default function Footer() {
   const isAdmin = currentUser?.role?.name === 'Administrator' || currentUser?.role?.name === 'SuperAdmin';
 
   return (
-    <footer id="footer" className="footer background-whitesmoke text-center">
-      <Container id="footer-container" className="py-3">
-        <a href="https://docs.bigbluebutton.org/greenlight/v3/install" target="_blank" rel="noreferrer">Greenlight</a>
+    <footer id="footer" className="footer  text-center">
+      <Container id="footer-container"  className='h-full'>
+        <p className='p-2'>کپی رایت 2023© برای شرکت مهندسی و توسعه گاز محفوظ می باشد.</p>
+        {/* <a href="https://docs.bigbluebutton.org/greenlight/v3/install" target="_blank" rel="noreferrer">Greenlight</a>
         { isAdmin && <span className="text-muted"> {env?.VERSION_TAG} </span> }
         { links?.Terms
           && (
@@ -50,7 +51,7 @@ export default function Footer() {
             <a className="ps-3" href={links?.AccessibilityStatement} target="_blank" rel="noreferrer">
               { t('admin.site_settings.administration.accessibility_statement') }
             </a>
-          )}
+          )} */}
       </Container>
     </footer>
   );

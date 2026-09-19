@@ -69,7 +69,10 @@
 }
 
 .background-whitesmoke {
-  background: whitesmoke !important;
+  background: var(--bs-orange) !important;
   box-shadow: 0 0 0 100vmax whitesmoke;
   clip-path: inset(0 -100vmax);
+  .p {
+    background-color: white;
+  }
 }

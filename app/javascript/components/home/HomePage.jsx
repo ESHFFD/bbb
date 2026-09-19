@@ -28,6 +28,7 @@ import { useAuth } from '../../contexts/auth/AuthProvider';
 import HomepageFeatureCard from './HomepageFeatureCard';
 import useRoomConfigValue from '../../hooks/queries/rooms/useRoomConfigValue';
 import useEnv from '../../hooks/queries/env/useEnv';
+import LoginSamane from './LoginSamane';
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -105,7 +106,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Row className="wide-white">
+      {/* <Row className="wide-white">
         <Col lg={10}>
           <div id="homepage-hero">
             <h1 className="my-4"> {t('homepage.welcome_bbb')} </h1>
@@ -121,9 +122,10 @@ export default function HomePage() {
             </a>
           </div>
         </Col>
-      </Row>
-      <Row>
-        <h4 className="text-muted text-uppercase my-4 py-1">{t('homepage.explore_features')}</h4>
+      </Row> */}
+    <div className='vertical-center'>
+       <Row className=" h-100 d-flex justify-content-center align-items-center">
+        {/* <h4 className="text-muted text-uppercase my-4 py-1">{t('homepage.explore_features')}</h4>
         <Col className="mb-3">
           <HomepageFeatureCard
             title={t('homepage.meeting_title')}
@@ -146,15 +148,12 @@ export default function HomePage() {
             description={t('homepage.settings_description')}
             icon={<Cog8ToothIcon className="hi-s text-white" />}
           />
-        </Col>
-        <Col className="mb-3">
-          <HomepageFeatureCard
-            title={t('homepage.and_more_title')}
-            description={t('homepage.and_more_description')}
-            icon={<WrenchScrewdriverIcon className="hi-s text-white" />}
-          />
+        </Col> */}
+        <Col className="mt-3" >
+         <LoginSamane/>
         </Col>
       </Row>
+    </div>
     </>
   );
 }

@@ -80,7 +80,7 @@ export default function App() {
 
   // Pages that do not need a header: SignIn, SignUp and JoinMeeting (if the user is not signed in)
   const homePage = location.pathname === '/';
-  const pageHeight = (homePage || currentUser.signed_in) ? 'regular-height' : 'no-header-height';
+  const pageHeight = (homePage || currentUser.signed_in) ? 'no-header-height' : 'no-header-height';
 
   // i18n
   const { i18n } = useTranslation();
@@ -99,7 +99,7 @@ export default function App() {
 
   return (
     <>
-      <Title lang={currentUser?.language} dir={i18next.dir(currentUser?.language)}>BigBlueButton</Title>
+      <Title lang={currentUser?.language} dir={i18next.dir(currentUser?.language)}>شرکت مهندسی وتوسعه گازایران</Title>
       { autoSignIn
         ? (
           <Container fluid className="d-flex vh-100 justify-content-center align-items-center">
@@ -114,7 +114,7 @@ export default function App() {
           </Container>
         ) : (
           <>
-            {(homePage || currentUser.signed_in) && <Header />}
+            {/* {(homePage || currentUser.signed_in) && <Header />} */}
             <Container className={pageHeight}>
               <Outlet />
             </Container>
