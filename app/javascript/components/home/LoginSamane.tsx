@@ -11,11 +11,12 @@ export default function LoginSamane() {
           <Logo />
         </div>
         <div className="d-flex my-4  w-100 justify-content-center">
-          <h1> سامانه ویدئوکنفرانس شرکت ملی گاز ایران</h1>
+          <h3 className="text-center"> سامانه ویدئوکنفرانس شرکت مهندسی و توسعه گاز ایران</h3>
         </div>
-        <h4 className="homepage-seprator">
+        {/* <h4 className="homepage-seprator">
             سامانه ارتباطات ویدئویی سازمانی
-        </h4>
+        </h4> */}
+        <div className="homepage-seprator"/>
             <p className="homepage-description">
                 {` برگزاری جلسات، نشست‌ها و ارتباطات ویدئویی سازمانی \n
                 با استفاده از زیرساخت ارتباطی شرکت ملی گاز ایران

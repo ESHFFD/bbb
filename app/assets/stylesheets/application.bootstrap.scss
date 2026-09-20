@@ -729,12 +729,7 @@ input[type="range"]:focus::-moz-range-thumb {
   min-height: 16.5rem;
   min-width: 16.5rem;
 }
-.homepage-seprator{
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  padding-bottom: 28px;
-}
+
 .homepage-description{
    white-space: pre-line;
    text-align: center;
@@ -757,18 +752,27 @@ input[type="range"]:focus::-moz-range-thumb {
    
     
 }
-.homepage-seprator::after{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 4px;
+.homepage-seprator{
+  position: relative;
+  display: inline-block;
+  text-align: center;
   background-color: var(--brand-color);
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
-
+ 
+   width: 100px;
+  height: 4px;
 }
+// .homepage-seprator::after{
+//   content: "";
+//   position: absolute;
+//   width: 100px;
+//   height: 4px;
+//   background-color: var(--brand-color);
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   margin: 0 auto;
+
+// }
 
 .homepage-card-icon-circle {
   width: 50px;
