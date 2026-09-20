@@ -14,43 +14,37 @@
 // You should have received a copy of the GNU Lesser General Public License along
 // with Greenlight; if not, see <http://www.gnu.org/licenses/>.
 
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import {
-  Navbar,
-} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../../contexts/auth/AuthProvider';
-import Logo from './Logo';
-import NavbarSignedIn from '../home/NavbarSignedIn';
-import NavbarNotSignedIn from '../home/NavbarNotSignedIn';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import { Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/auth/AuthProvider";
+import Logo from "./Logo";
+import NavbarSignedIn from "../home/NavbarSignedIn";
+import NavbarNotSignedIn from "../home/NavbarNotSignedIn";
 
 export default function Header() {
   const currentUser = useAuth();
 
-  let homePath = '/';
-  if (currentUser?.permissions?.CreateRoom === 'true') {
-    homePath = '/rooms';
-  } else if (currentUser?.permissions?.CreateRoom === 'false') {
-    homePath = '/home';
+  let homePath = "/";
+  if (currentUser?.permissions?.CreateRoom === "true") {
+    homePath = "/rooms";
+  } else if (currentUser?.permissions?.CreateRoom === "false") {
+    homePath = "/home";
   }
 
   return (
-    // <Navbar collapseOnSelect id="navbar" expand="sm">
-      <Navbar collapseOnSelect >
+<Navbar collapseOnSelect id={currentUser.signed_in ? "navbar" : undefined} expand={currentUser.signed_in ? "sm" : undefined} >   
       <Container className="ps-0">
-        {/* <Navbar.Brand as={Link} to={homePath} className="ps-2">
-          <Logo size="small" />
-        </Navbar.Brand> */}
-        {
-          currentUser.signed_in
-            ? (
-              <NavbarSignedIn currentUser={currentUser} />
-            ) : (
-              // <NavbarNotSignedIn />
-              null
-            )
-        }
+        {currentUser.signed_in && (
+          <Navbar.Brand as={Link} to={homePath} className="ps-2">
+            <Logo size="small" />
+          </Navbar.Brand>
+        )}
+        {currentUser.signed_in ? (
+          <NavbarSignedIn currentUser={currentUser} />
+        ) : // <NavbarNotSignedIn />
+        null}
       </Container>
     </Navbar>
   );

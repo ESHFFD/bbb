@@ -211,7 +211,7 @@
       "create_account": "ایجاد حساب کاربری",
       "create_room": "ایجاد اتاق",
       "create_new_room": "ایجاد اتاق جدید",
-      "user_created_at": "ایجاد‌شده: {{user.created_at}}",
+      "user_created_at": "ایجاد‌شده: {{localizedTime}}",
       "are_you_sure_delete_account": "آیا مطمئن هستید که می‌خواهید حساب کاربری {{user.name}} را حذف کنید؟",
       "delete_account_warning": "اگر این حساب کاربری را حذف کنید، قابل بازیابی نخواهد بود.",
       "empty_active_users": "هنوز هیچ کاربر فعالی در این سرور وجود ندارد!",

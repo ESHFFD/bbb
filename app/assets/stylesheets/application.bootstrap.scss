@@ -519,7 +519,7 @@ input.search-bar {
 }
 @media (min-width: 768px) {
   .table-responsive {
-    overflow: visible;
+    // overflow: visible;
   }
 }
 
@@ -861,4 +861,9 @@ input[type="range"]:focus::-moz-range-thumb {
   .card-body {
     min-height: 20rem;
   }
+}
+
+
+.ml{
+
 }
